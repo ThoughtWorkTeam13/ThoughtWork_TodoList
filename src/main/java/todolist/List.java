@@ -6,7 +6,7 @@ public class List {
     private final int usrId;
 
     public List(Item[] item_p, int id) {
-        // 构造函�?
+        // 构造函数
         this.items = item_p;
         this.usrId = id;
     }

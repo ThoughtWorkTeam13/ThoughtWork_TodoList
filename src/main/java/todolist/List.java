@@ -3,10 +3,12 @@ package todolist;
 public class List {
 
     private Item[] items;
+    private final int usrId;
 
-    public List(Item[] item_p) {
-        // 构造函数
+    public List(Item[] item_p, int id) {
+        // 构造函�?
         this.items = item_p;
+        this.usrId = id;
     }
 
     public boolean addItem(String title, String deadline, boolean isFinnsh) {

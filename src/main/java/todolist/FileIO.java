@@ -1,7 +1,7 @@
 package todolist;
 
 public class FileIO {
-    private String filename;
+    private String path;
 
     public List openFile(String fn) {
         Item[] iteamArr = new Item[1000];

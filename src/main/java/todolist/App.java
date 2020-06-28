@@ -38,14 +38,14 @@ public class App {
     
     
     public static void printTask(int[] index, String[] title, String[] deadline, boolean[] status) {
-        int usrId =0；
+        int usrId =0;
         //列表顶部
         System.out.println("---------------------------查看任务--------------------------");
         System.out.println("任务序号        任务内容    截止时间    是否完成");
         //列表中部
-        for (int i = 0; i < this.index.length; i++) {
-            System.out.println(index[i]+"    "+title[i]+"    "+deadline[i]+"    "+status[i]);
-        }
+//        for (int i = 0; i < this.index.length; i++) {
+//            System.out.println(index[i]+"    "+title[i]+"    "+deadline[i]+"    "+status[i]);
+//        }
         //列表底部
         System.out.println("-------------------------------------------------------------");
         
@@ -65,33 +65,33 @@ public class App {
          
 
 
-        //通过while循环进行功能重复选择操作
-        while (true) {
-            //打印功能菜单操作,接收键盘输入的功能选项序号
-            int choose = chooseFunction();
-            //执行序号对应的功能
-            switch (choose) {
-                case 1://查看任务
-                    printTask(index, title, deadline, status);
-                    break;
-                case 2://增加任务
-                    addItem(index, title, deadline, status);
-                    break;
-                case 3://删除任务
-                    deleteItem(index);
-                    break;
-                case 4://标记完成任务
-                    addItem(index);
-                    break;
-                case 5://退出
-                    exit();
-                    return;
-                default:
-                    System.out.println("----------------------------------");
-                    System.out.println("功能选择有误，请输入正确的功能序号!");
-                    break;
-            }
-        }
+//        //通过while循环进行功能重复选择操作
+//        while (true) {
+//            //打印功能菜单操作,接收键盘输入的功能选项序号
+//            int choose = chooseFunction();
+//            //执行序号对应的功能
+//            switch (choose) {
+//                case 1://查看任务
+//                    printTask(index, title, deadline, status);
+//                    break;
+//                case 2://增加任务
+//                    addItem(index, title, deadline, status);
+//                    break;
+//                case 3://删除任务
+//                    deleteItem(index);
+//                    break;
+//                case 4://标记完成任务
+//                    addItem(index);
+//                    break;
+//                case 5://退出
+//                    exit();
+//                    return;
+//                default:
+//                    System.out.println("----------------------------------");
+//                    System.out.println("功能选择有误，请输入正确的功能序号!");
+//                    break;
+//            }
+//        }
         
     }
 }

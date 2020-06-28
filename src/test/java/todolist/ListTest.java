@@ -10,7 +10,7 @@ class ListTest {
     Item ItemUnderTest2 = new Item("Todo2", "2020/6/28",false);
     Item ItemUnderTest3 = new Item("Todo3", "2020/6/29",false);
     Item Itemlist[] = {ItemUnderTest1,ItemUnderTest2,ItemUnderTest3};
-    List ListsUnderTest = new List(Itemlist,0);
+    List ListsUnderTest = new List(Itemlist,0, 3);
     //初始化一个对象
 
     @Test

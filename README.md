@@ -8,7 +8,15 @@
 ### 类的功能
 * FileIO 
     * 负责文件的读取和写入
-    * 读写文件为.xml格式
+    * 读写文件为.xml格式，示例：
+        <?xml version="1.0" encoding="UTF-8"?>    
+            <events>    
+                <event id="0">  
+                    <title>demo</title>  
+                    <ddl>demo</ddl>  
+                    <status>demo</status>  
+                </event>    
+            </events>    
 * Item 用于存储单个todoList表项
 * List 是一个todoList的类
 

@@ -3,8 +3,8 @@ package todolist;
 public class List {
 
     private Item[] items;
-    private final int usrId;
-    private int itemNum;
+    private final int usrId;   // 通过usrId打开对应的文件
+    private int itemNum;   // Item的有效长度
 
     public List(Item[] item_p, int id, int len) {
         // 构造函数
@@ -22,8 +22,7 @@ public class List {
     }
 
     public boolean addItem(String title, String deadline, boolean isFinnsh) {
-        Item aitem = new Item(title, deadline, isFinnsh);
-        this.items[itemNum] = aitem;
+        this.items[itemNum] = new Item(title, deadline, isFinnsh);
         this.itemNum += 1;
         return true;
     }

@@ -7,49 +7,49 @@ import java.util.Scanner;
 public class App {
     
     
-    public String getGreeting() {
-        return "欢迎使用";
-    }
-    
-     public static void exit(){
-        System.out.println("----------------退出---------------");
-        System.out.println("您已退出");
-    }
-    
-    
-    /**
-     * 任务管理功能菜单
-     * @return 键盘输入的功能操作序号
-     */
-    public static int chooseFunction() {
-        System.out.println("-------------待办事项管理------------");
-        System.out.println("1.查看任务");
-        System.out.println("2.增加任务");
-        System.out.println("3.删除任务");
-        System.out.println("4.标记完成任务");
-        System.out.println("5.退出");
-        
-        System.out.println("请输入要执行的操作序号：");
-        //接收键盘输入的功能选项序号
-        Scanner sc = new Scanner(System.in);
-        int choose = sc.nextInt();
-        return choose;
-    }
-    
-    
-    public static void printTask(int[] index, String[] title, String[] deadline, boolean[] status) {
-        int usrId =0;
-        //列表顶部
-        System.out.println("---------------------------查看任务--------------------------");
-        System.out.println("任务序号        任务内容    截止时间    是否完成");
-        //列表中部
+//    public String getGreeting() {
+//        return "欢迎使用";
+//    }
+//
+//     public static void exit(){
+//        System.out.println("----------------退出---------------");
+//        System.out.println("您已退出");
+//    }
+//
+//
+//    /**
+//     * 任务管理功能菜单
+//     * @return 键盘输入的功能操作序号
+//     */
+//    public static int chooseFunction() {
+//        System.out.println("-------------待办事项管理------------");
+//        System.out.println("1.查看任务");
+//        System.out.println("2.增加任务");
+//        System.out.println("3.删除任务");
+//        System.out.println("4.标记完成任务");
+//        System.out.println("5.退出");
+//
+//        System.out.println("请输入要执行的操作序号：");
+//        //接收键盘输入的功能选项序号
+//        Scanner sc = new Scanner(System.in);
+//        int choose = sc.nextInt();
+//        return choose;
+//    }
+//
+//
+//    public static void printTask(int[] index, String[] title, String[] deadline, boolean[] status) {
+//        int usrId =0;
+//        //列表顶部
+//        System.out.println("---------------------------查看任务--------------------------");
+//        System.out.println("任务序号        任务内容    截止时间    是否完成");
+//        //列表中部
 //        for (int i = 0; i < this.index.length; i++) {
 //            System.out.println(index[i]+"    "+title[i]+"    "+deadline[i]+"    "+status[i]);
 //        }
-        //列表底部
-        System.out.println("-------------------------------------------------------------");
-        
-    }
+//        //列表底部
+//        System.out.println("-------------------------------------------------------------");
+//
+//    }
 
     
     
@@ -61,10 +61,20 @@ public class App {
 
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
-         
+//        System.out.println(new App().getGreeting());
+        Item[] Itemlist = new Item[10];
+        Item ItemUnderTest1 = new Item("Todo1", "2020/6/27",true);
+        Item ItemUnderTest2 = new Item("Todo2", "2020/6/28",false);
+        Item ItemUnderTest3 = new Item("Todo3", "2020/6/29",false);
 
+        Itemlist[0] = ItemUnderTest1;
+        Itemlist[1] = ItemUnderTest2;
+        Itemlist[2] = ItemUnderTest3;
+        List ListsUnderTest = new List(Itemlist,0, 3);
 
+        FileIO ListWantedTobesaved = new FileIO();
+//        ListWantedTobesaved.saveFile(ListsUnderTest, 1);
+        ListWantedTobesaved.openFile(0);
 //        //通过while循环进行功能重复选择操作
 //        while (true) {
 //            //打印功能菜单操作,接收键盘输入的功能选项序号
@@ -95,4 +105,4 @@ public class App {
         
     }
 }
->>>>>>> origin/master
+

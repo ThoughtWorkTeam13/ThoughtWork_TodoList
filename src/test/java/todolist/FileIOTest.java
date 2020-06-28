@@ -12,17 +12,17 @@ class FileIOTest {
 
     FileIO ListWantedTobesaved = new FileIO();
 
-//    @Test
-//    void saveFile() {
-//        assertTrue(ListWantedTobesaved.saveFile(ListsUnderTest, 0));
-//    }
-//
-//
-//    @Test
-//    void openFile() {
-//        assertNotNull(ListWantedTobesaved.openFile(0));
-//        assertEquals(ListWantedTobesaved.openFile(0).getItem(0).title, "Todo1");
-//        assertEquals(ListWantedTobesaved.openFile(0).getItem(0).deadline, "2020/6/27");
-//        assertTrue(ListWantedTobesaved.openFile(0).getItem(0).isFinnsh);
-//    }
+    @Test
+    void saveFile() {
+        assertTrue(ListWantedTobesaved.saveFile(ListsUnderTest, 0));
+    }
+
+
+    @Test
+    void openFile() {
+        assertNotNull(ListWantedTobesaved.openFile(0));
+        assertEquals(ListWantedTobesaved.openFile(0).getItem(0).title, "Todo1");
+        assertEquals(ListWantedTobesaved.openFile(0).getItem(0).deadline, "2020/6/27");
+        assertTrue(ListWantedTobesaved.openFile(0).getItem(0).isFinnsh);
+    }
 }

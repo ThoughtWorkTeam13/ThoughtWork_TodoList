@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><events>
+    <event id="0">
+        <title>Todo1</title>
+        <ddl>2020/6/27</ddl>
+        <status>true</status>
+    </event>
+    <event id="1">
+        <title>Todo2</title>
+        <ddl>2020/6/28</ddl>
+        <status>false</status>
+    </event>
+    <event id="2">
+        <title>Todo3</title>
+        <ddl>2020/6/29</ddl>
+        <status>false</status>
+    </event>
+</events>

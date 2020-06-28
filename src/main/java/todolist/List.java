@@ -6,10 +6,11 @@ public class List {
     private final int usrId;
     private int itemNum;
 
-    public List(Item[] item_p, int id) {
+    public List(Item[] item_p, int id, int len) {
         // 构造函数
         this.items = item_p;
         this.usrId = id;
+        this.itemNum = len;
     }
     
     public int getItemNum() {

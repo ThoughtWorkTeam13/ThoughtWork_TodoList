@@ -51,14 +51,6 @@ public class App {
 
     }
 
-    
-    
-    public void addItem(){
-       
-        
-        
-    }
-
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());

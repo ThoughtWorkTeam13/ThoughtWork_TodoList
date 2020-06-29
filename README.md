@@ -21,5 +21,9 @@
     ~~~
 * Item 用于存储单个todoList表项
 * List 是一个todoList的类
-
+## 运行方法
+### 运行测试
+> ./gradlew test
+### 运行程序
+运行App.java中的main函数
 

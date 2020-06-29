@@ -21,10 +21,28 @@ public class List {
     	return items[index];
     }
 
+    public void printAllTask() {
+        //列表顶部
+        System.out.println("---------------------------查看任务--------------------------");
+        System.out.println("任务序号        任务内容    截止时间    是否完成");
+        //列表中部
+        for (int i = 0; i < this.itemNum; i++) {
+            System.out.println("  " + i +"\t"+this.items[i].title+"\t"+this.items[i].deadline+"    "+this.items[i].isFinnsh);
+        }
+        //列表底部
+        System.out.println("-------------------------------------------------------------");
+
+    }
+
     public boolean addItem(String title, String deadline, boolean isFinnsh) {
-        this.items[itemNum] = new Item(title, deadline, isFinnsh);
-        this.itemNum += 1;
-        return true;
+        try {
+            this.items[itemNum] = new Item(title, deadline, isFinnsh);
+            this.itemNum += 1;
+            return true;
+        }
+        catch (RuntimeException err) {  // 可能发生数组越界
+            return false;
+        }
     }
 
     public boolean deleteItem(int index) {
@@ -35,8 +53,8 @@ public class List {
             for(int i=index;i<this.itemNum-1;++i)
             {
                 this.items[i] = this.items[i+1];
-                this.itemNum -= 1;
             }
+            this.itemNum -= 1;
             return true;
         }
     }

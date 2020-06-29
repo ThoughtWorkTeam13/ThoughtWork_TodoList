@@ -21,7 +21,7 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 public class FileIO {
-    private final int MaxSize = 20;
+    private final int MaxSize = 50;
 
     public List openFile(int usrId) {
         Item[] itemArr = new Item[MaxSize];

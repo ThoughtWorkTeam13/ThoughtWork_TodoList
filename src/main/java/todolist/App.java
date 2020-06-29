@@ -34,6 +34,7 @@ public class App {
         return sc.nextInt();
     }
 
+    
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
 
